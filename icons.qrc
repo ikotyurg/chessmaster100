@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>img/alpha.png</file>
+	<file>img/merida.png</file>
+	<file>img/leipzig.png</file>
+        <file>img/flip_board.png</file>
+        <file>img/closedhand.png</file>
+    </qresource>
+</RCC>
