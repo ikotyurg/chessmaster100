@@ -20,17 +20,11 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
-     <widget class="QSplitter" name="splitter">
-      <property name="orientation">
-       <enum>Qt::Orientation::Horizontal</enum>
-      </property>
-      <widget class="QWidget" name="horizontalLayoutWidget">
-       <layout class="QHBoxLayout" name="horizontalLayout"/>
-      </widget>
-      <widget class="QWidget" name="verticalLayoutWidget">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
        <layout class="QVBoxLayout" name="verticalLayout"/>
-      </widget>
-     </widget>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
@@ -47,30 +41,180 @@
     <property name="title">
      <string>Файл</string>
     </property>
-    <addaction name="action"/>
-    <addaction name="action_4"/>
     <addaction name="separator"/>
-    <addaction name="exit"/>
+    <addaction name="MenuOpenGame"/>
+    <addaction name="MenuSaveGame"/>
+    <addaction name="MenuReSaveGame"/>
+    <addaction name="MenuLastGames"/>
+    <addaction name="separator"/>
+    <addaction name="MenuExit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Правка</string>
+    </property>
+    <addaction name="MenuInsertFEN"/>
+    <addaction name="MenuCopyFEN"/>
+    <addaction name="MenuSetupPos"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>Игра</string>
+    </property>
+    <addaction name="MenuNewGame"/>
+    <addaction name="MenuInsertGame"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>Вид</string>
+    </property>
+    <addaction name="MenuFlipBrd"/>
+    <addaction name="MenuSetupPrg"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>Помощь</string>
+    </property>
+    <addaction name="MenuAbout"/>
    </widget>
    <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+   <addaction name="menu_5"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="action">
-   <property name="text">
-    <string>Новая база</string>
-   </property>
-  </action>
-  <action name="action_4">
-   <property name="text">
-    <string>Открыть базу</string>
-   </property>
-  </action>
-  <action name="exit">
+  <action name="MenuOpenGame">
    <property name="icon">
-    <iconset theme="QIcon::ThemeIcon::WindowClose"/>
+    <iconset theme="document-open"/>
    </property>
    <property name="text">
-    <string>Выйти из программы</string>
+    <string>Открыть игру</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="MenuSaveGame">
+   <property name="icon">
+    <iconset theme="document-save-as"/>
+   </property>
+   <property name="text">
+    <string>Сохранить игру</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="MenuReSaveGame ">
+   <property name="icon">
+    <iconset theme="document-save"/>
+   </property>
+   <property name="text">
+    <string>Перезаписать игру</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="MenuExit">
+   <property name="icon">
+    <iconset theme="window-close"/>
+   </property>
+   <property name="text">
+    <string>Выход</string>
+   </property>
+   <property name="toolTip">
+    <string>Выход из программы</string>
+   </property>
+  </action>
+  <action name="MenuLastGames">
+   <property name="icon">
+    <iconset theme="document-send"/>
+   </property>
+   <property name="text">
+    <string>Недавно открытые игры</string>
+   </property>
+  </action>
+  <action name="MenuAbout">
+   <property name="icon">
+    <iconset theme="help-about"/>
+   </property>
+   <property name="text">
+    <string>О программе</string>
+   </property>
+  </action>
+  <action name="MenuInsertFEN">
+   <property name="icon">
+    <iconset theme="edit-paste"/>
+   </property>
+   <property name="text">
+    <string>Вставить FEN</string>
+   </property>
+  </action>
+  <action name="MenuCopyFEN">
+   <property name="icon">
+    <iconset theme="edit-copy"/>
+   </property>
+   <property name="text">
+    <string>Скопировать FEN</string>
+   </property>
+  </action>
+  <action name="MenuSetupPos">
+   <property name="icon">
+    <iconset theme="preferences-desktop"/>
+   </property>
+   <property name="text">
+    <string>Расстановка позиции</string>
+   </property>
+   <property name="shortcut">
+    <string>S</string>
+   </property>
+  </action>
+  <action name="MenuNewGame">
+   <property name="icon">
+    <iconset theme="list-add"/>
+   </property>
+   <property name="text">
+    <string>Новая игра</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="MenuInsertGame">
+   <property name="icon">
+    <iconset theme="edit-paste"/>
+   </property>
+   <property name="text">
+    <string>Вставить игру (текст)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="MenuFlipBrd">
+   <property name="icon">
+    <iconset theme="object-rotate-right"/>
+   </property>
+   <property name="text">
+    <string>Перевернуть доску</string>
+   </property>
+  </action>
+  <action name="MenuSetupPrg">
+   <property name="icon">
+    <iconset theme="preferences-other"/>
+   </property>
+   <property name="text">
+    <string>Настройки программы</string>
+   </property>
+  </action>
+  <action name="MenuReSaveGame">
+   <property name="icon">
+    <iconset theme="document-save"/>
+   </property>
+   <property name="text">
+    <string>Перезаписать игру</string>
    </property>
   </action>
  </widget>
